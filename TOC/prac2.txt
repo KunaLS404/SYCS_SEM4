@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  5 09:43:46 2022
+
+@author: INDIA
+"""
+import re
+#multiple matches
+x="123 1234 12345 123456 1234567"
+y9=(re.findall("\d{5,7}",x))
+print(y9)
+'''
+#\b backspace \t tab \v vertical tab
+#match character 
+x="123456"
+y8=len(re.findall("\d",x))
+print(y8)
+
+
+
+#replace new line with space
+x="ran man lan van can pan"
+y7=re.compile("\n")
+c=y7.sub("",x)
+print(c)
+
+#replace string
+y3=re.compile("[c]an")
+c=y3.sub("0",x)
+print(c)
+ 
+
+x="Cricbuzz is an Indian cricket news website owned by Times Internet. It features, news, articles and live coverage of cricket matches including videos, text commentary, player stats and team rankings. Their website also offers a mobile app"
+
+
+
+#match words with perticular pattern
+x="ran man lan van can pan"
+y3=re.findall("[b-k]an",x)
+for i in y3:
+    print(i)
+
+y3=re.findall("[rmlvcp]an",x)
+for i in y3:
+    print(i)
+    
+
+#iterator starting & ending iterator
+for i in re.finditer("team",x):
+    y2=i.span()
+    print(y2)
+
+
+
+#find all
+y1=re.findall("is",x)
+for i in y1:
+    print(i)
+
+#searching
+if re.search("is",x):
+    print("the search is successfull")
+'''   
